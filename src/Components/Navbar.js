@@ -17,7 +17,7 @@ const Navbar = () => {
                 <span>T</span>ech
             </h2>
         </div>
-        <div className="menu_link mobile_menu_link">
+        <div className={showMediaIcons ?  "menu_link mobile_menu_link" : "menu_link"}  >
             <ul>
                 <li><a href="#"></a>Home</li>
                 <li><a href="#"></a>About</li>

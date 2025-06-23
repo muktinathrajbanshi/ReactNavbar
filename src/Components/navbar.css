@@ -77,6 +77,10 @@ li {
   display: none;
 }
 
+.social_media .hamburger_menu :hover {
+  color: aqua;
+}
+
 .social_media ul {
   height: 10rem;
   display: grid;
