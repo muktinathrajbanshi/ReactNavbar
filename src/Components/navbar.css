@@ -56,6 +56,22 @@ li {
   align-items: center;
 }
 
+.menu_link ul li:hover {
+  transform-origin: left;
+  color: rgba(0, 0, 3, 1);
+  text-decoration: underline;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  cursor: pointer;
+}
+
+.social_media .hamburger_menu {
+  display: none;
+}
+
 .social_media {
   grid-column: 4/5;
 }
@@ -69,7 +85,7 @@ li {
 }
 
 .facebook {
-  background: #3b5998;
+  background-color: #3b5998;
   color: #fff;
 }
 
@@ -124,4 +140,106 @@ li {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
+}
+
+.hero_section {
+  margin-top: 20rem;
+}
+
+.hero_section p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-transform: capitalize;
+  padding-bottom: 8px;
+}
+
+.hero_section h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.social_media .hamburger_menu {
+  display: block;
+  font-size: 2.5rem;
+}
+
+/* responsive css style */
+
+@media (max-width: 1080px) {
+  .main_nav {
+    height: 8rem;
+    grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+  }
+  .logo,
+  .menu_link ul,
+  .social_media ul {
+    height: 8rem;
+  }
+}
+
+@media (max-width: 998px) {
+  .main_nav {
+    height: 7rem;
+    grid-template-columns: 2rem 2fr 2rem 2rem;
+  }
+  .menu_link {
+    display: none;
+  }
+  .logo,
+  .social_media ul {
+    height: 7rem;
+  }
+  .mobile_menu_link {
+    grid-column: 2/4;
+    position: relative;
+    z-index: 99;
+  }
+  .mobile_menu_link {
+    background-color: #fff;
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mobile_menu_link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .social_media {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    justify-items: end;
+    align-items: center;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -ms-transition: all 2s linear;
+    -o-transition: all 2s linear;
+  }
+  .social_media .social_media_desktop {
+    height: 0;
+    display: none;
+  }
+
+  .social_media {
+    height: 7rem;
+    display: flex;
+    justify-self: end;
+  }
+  .social_media .hamburger_menu {
+    font-size: 2.5rem;
+    padding-right: 20px;
+    color: #3b5998;
+  }
+}
+
+@media (max-width: 798) {
+  .main_nav {
+    height: 6rem;
+    grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
+  }
 }

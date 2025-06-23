@@ -1,14 +1,16 @@
 import React from 'react';
 import "./navbar.css";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 const Navbar = () => {
   return (
     <>
       <nav className="main_nav">
         <div className="logo">
             <h2>
-                <span>Muktinath</span>
-                <span> Tech</span>
+                <span>M</span>uktinath
+                <span>T</span>ech
             </h2>
         </div>
         <div className="menu_link">
@@ -20,14 +22,21 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="social_media">
-            <ul className="social_media-desktop">
-                <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaFacebook className="facebook" /></li>
-                <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaInstagram className="instagram" /></li>
-                <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaYoutube className="youtube" /></li>
+            <ul className="social_media_desktop">
+                <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaFacebookSquare className="facebook" /></li>
+                <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaInstagramSquare className="instagram" /></li>
+                <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaYoutubeSquare className="youtube" /></li>
             </ul>
+                {/* humburget menu start */}
+                <div className="hamburger_menu">
+                  <a href="#">
+                    <GiHamburgerMenu />
+                  </a>
+                </div>
         </div>
+
       </nav>
-      <section className="hero-section">
+      <section className="hero_section">
         <p>Welcome to</p>
         <h1>Muktinath Tech</h1>
       </section>
