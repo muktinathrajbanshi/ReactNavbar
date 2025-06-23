@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./navbar.css";
 import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
+
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
+
+
   return (
     <>
       <nav className="main_nav">
@@ -13,7 +17,7 @@ const Navbar = () => {
                 <span>T</span>ech
             </h2>
         </div>
-        <div className="menu_link">
+        <div className="menu_link mobile_menu_link">
             <ul>
                 <li><a href="#"></a>Home</li>
                 <li><a href="#"></a>About</li>
@@ -28,11 +32,11 @@ const Navbar = () => {
                 <li><a href="https://www.youtube.com/@muktinathrajbanshi219" target="_blank"></a><FaYoutubeSquare className="youtube" /></li>
             </ul>
                 {/* humburget menu start */}
-                <div className="hamburger_menu">
-                  <a href="#">
+            <div className="hamburger_menu">
+                  <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
                     <GiHamburgerMenu />
                   </a>
-                </div>
+            </div>
         </div>
 
       </nav>
